@@ -18,7 +18,7 @@ server.on("connection", (clientToProxySocket) => {
                 .split(" ")[1]
                 .split(":")[0];
         } else {
-            serverAddress = data.toString().split("Host: ")[1].split("\n")[0];
+            serverAddress = data.toString().split("Host: ")[1].split("\r\n")[0];
         }
         console.log(serverAddress);
 
