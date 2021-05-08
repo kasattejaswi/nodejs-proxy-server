@@ -35,7 +35,7 @@ server.on("connection", (clientToProxySocket) => {
 
 
         if (isTLSConnection) {
-            clientToProxySocket.write("HTTP/1.1 200 OK\r\n\n");
+            clientToProxySocket.write("HTTP/1.1 200 OK\r\n\r\n");
         } else {
             proxyToServerSocket.write(data);
         }
